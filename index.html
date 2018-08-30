@@ -21,8 +21,9 @@
     <!-- button row div -->
     <div class="row" id="buttonContainer">
         <div class="col-md-12">
-            <button data-cats="cats">Calico Cats</button>
-
+            <button data-cats="calico-cats">Calico Cats</button>
+            <button data-cats="lucky-cats">Lucky Cats</button>
+            <button data-cats="jerk-cats">Jerk Cats</button>
         </div>
     </div>
 
@@ -32,7 +33,12 @@
             
         </div>
         <div class="col-md-3" id="search">
-            Search goes here.
+            <form id="cat-form">
+                <label for="cat-input"></label>
+                <input type="text" id="cat-input"><br>
+                <!-- Button triggers new movie to be added -->
+                <input id="add-cat" type="submit" value="Add a cat!">
+              </form>
         </div>
     </div>
 

@@ -21,13 +21,13 @@
 // limit = max number of results returned
 // rating = age content
 
-var topics = ["calico cats", "lucky cats", "funny cats", "jerk cats"];
+var topics = ["calico cats", "lucky cats", "jerk cats"];
     // search will add to this array
 
 // on load
 // $(document).ready(function() {
     // on click
-    $("button").on("click", function() { 
+    $("button").on("click", function(renderAPI) { 
         var cats = $(this).attr("data-cats");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         cats + "&api_key=dc6zaTOxFJmzC&limit=5";
@@ -71,6 +71,17 @@ var topics = ["calico cats", "lucky cats", "funny cats", "jerk cats"];
         }
     });
 
+    // search and add
+    // take text entered into search field and create Giphy request
+    // push to topics array 
+    $("#add-cat").on("click", function(event) {
+        event.preventDefault();
+        var topics = $("#cat-input").val().trim();
+        var newCat = $("#cat-input").val().trim();
+        newCat.push(topics);
+        renderAPI();
+    });
 
+    $(document).on("click", ".gif", )
 
 // });
