@@ -58,10 +58,10 @@ var topics = ["calico cats", "lucky cats", "jerk cats"];
         });
     });
 
-    // toggle
+
+    // toggle animation
     $(document).on("click", ".gif", function() {
         var state = $(this).attr("data-state");
-        console.log("hello");
         if (state == "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
@@ -71,6 +71,7 @@ var topics = ["calico cats", "lucky cats", "jerk cats"];
         }
     });
 
+    
     // search and add
     // take text entered into search field and create Giphy request
     // push to topics array 
@@ -81,7 +82,5 @@ var topics = ["calico cats", "lucky cats", "jerk cats"];
         newCat.push(topics);
         renderAPI();
     });
-
-    $(document).on("click", ".gif", )
 
 // });
