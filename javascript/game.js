@@ -59,9 +59,9 @@ var topics = ["calico cats", "lucky cats", "funny cats", "jerk cats"];
     });
 
     // toggle
-    $(".gif").on("click", function() {
+    $(document).on("click", ".gif", function() {
         var state = $(this).attr("data-state");
-        // console.log(state);
+        console.log("hello");
         if (state == "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
