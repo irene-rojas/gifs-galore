@@ -31,7 +31,7 @@ renderButtons();
 $(document).ready(function() {
 
     // on click
-    $("button").on("click", function() { 
+    $("#buttonContainer").on("click", ".button", function() { 
         var cats = $(this).attr("data-cats");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         cats + "&api_key=dc6zaTOxFJmzC&limit=10";
