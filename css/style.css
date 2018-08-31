@@ -1,0 +1,10 @@
+body {
+    margin: 0 auto;
+}
+
+#buttonContainer {
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
