@@ -18,6 +18,10 @@ function renderButtons() {
     }
 }
 
+var cats = $(this).attr("data-cats");
+var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+cats + "&api_key=dc6zaTOxFJmzC&limit=10";
+
 // this shows initial buttons
 renderButtons();
 
@@ -66,6 +70,7 @@ $(document).ready(function() {
         event.preventDefault();
         var newCat = $("#cat-input").val().trim();
         topics.push(newCat);
+        // console.log(topics);
         renderButtons();
         console.log(newCat);
     });
@@ -87,4 +92,3 @@ $(document).ready(function() {
 });
 
 
-// renderButtons();
