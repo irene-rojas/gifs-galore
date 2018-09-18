@@ -9,3 +9,7 @@ body {
     margin-bottom: 25px;
 }
 
+#results {
+    margin: 0 auto;
+    text-align: center;
+}
